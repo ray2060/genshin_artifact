@@ -48,7 +48,7 @@ ATTR_TUP = (
 )
 
 window = Tk()
-window.title('圣遗物评分计算器 v1.0')
+window.title('GI Artifact v1.1')
 window.geometry('800x450')
 window.configure(background='#b0bec5')
 
@@ -131,30 +131,118 @@ spin_DEFP.grid(column=8, row=1)
 spin_DEFV.grid(column=9, row=1)
 
 ATTRQS = (
-	'01.充精 辅助枫原万叶 辅助砂糖（暂不支持）',
-	'02.折攻充精双暴 点香菱（暂不支持）',
-	'03.折攻生充 珊瑚宫心海（暂不支持）',
-	'04.折攻生精双暴 胡桃（暂不支持）',
-	'05.折攻防充双暴 荒泷一斗（暂不支持）',
-	'06.攻充 辅助琴 申鹤（暂不支持）',
+	'01.充精 辅助枫原万叶 辅助砂糖',
+	'02.折攻充精双暴 点香菱',
+	'03.折攻生充 珊瑚宫心海',
+	'04.折攻生精双暴 胡桃',
+	'05.折攻防充双暴 荒泷一斗',
+	'06.攻充 辅助琴 申鹤',
 	'07.攻充双暴 琴 输出班尼特 副C甘雨 雷电将军 北斗',
-	'08.攻充折精双暴 行秋（暂不支持）',
-	'09.攻充暴击 西风申鹤（暂不支持）',
+	'08.攻充折精双暴 行秋',
+	'09.攻充暴击 西风申鹤',
 	'10.攻充精双暴 温迪 枫原万叶 砂糖 香菱',
-	'11.攻双暴 宵宫 甘雨（暂不支持）',
-	'12.攻精双暴 蒸发宵宫 融化甘雨（暂不支持）',
-	'13.攻折充双暴 神里绫华（暂不支持）',
-	'14.攻折精双暴 达达利亚（暂不支持）',
-	'15.攻生折充双暴 钟离（暂不支持）',
-	'16.生充 班尼特（暂不支持）',
-	'17.防双暴 阿贝多（暂不支持）'
+	'11.攻双暴 宵宫 甘雨',
+	'12.攻精双暴 蒸发宵宫 融化甘雨',
+	'13.攻折充双暴 神里绫华',
+	'14.攻折精双暴 达达利亚',
+	'15.攻生折充双暴 钟离',
+	'16.生充 班尼特',
+	'17.防双暴 阿贝多'
 )
 
 def attrqs():
 	try:
-		if combobox_attrqs.get()[:2] == '07':
+		if combobox_attrqs.get()[:2] == '01':
+			var_CHC.set(0)
+			var_CHD.set(0)
+			var_CE.set(1)
+			var_ATKP.set(0)
+			var_ATKV.set(0)
+			var_EM.set(1)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '02':
 			var_CHC.set(1)
 			var_CHD.set(1)
+			var_CE.set(1)
+			var_ATKP.set(0.5)
+			var_ATKV.set(0.5)
+			var_EM.set(1)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '03':
+			var_CHC.set(0)
+			var_CHD.set(0)
+			var_CE.set(1)
+			var_ATKP.set(0.5)
+			var_ATKV.set(0.5)
+			var_EM.set(0)
+			var_HP.set(1)
+			var_HN.set(1)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '04':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0)
+			var_ATKP.set(0.5)
+			var_ATKV.set(0.5)
+			var_EM.set(1)
+			var_HP.set(1)
+			var_HN.set(1)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '05':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(1)
+			var_ATKP.set(0.5)
+			var_ATKV.set(0.5)
+			var_EM.set(0)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(1)
+			var_DEFV.set(1)
+		elif combobox_attrqs.get()[:2] == '06':
+			var_CHC.set(0)
+			var_CHD.set(0)
+			var_CE.set(1)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '07':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(1)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '08':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(1)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0.5)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '09':
+			var_CHC.set(1)
+			var_CHD.set(0)
 			var_CE.set(1)
 			var_ATKP.set(1)
 			var_ATKV.set(1)
@@ -174,6 +262,83 @@ def attrqs():
 			var_HN.set(0)
 			var_DEFP.set(0)
 			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '11':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '12':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(1)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '13':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0.5)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '14':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0.5)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '15':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0.5)
+			var_ATKP.set(1)
+			var_ATKV.set(1)
+			var_EM.set(0)
+			var_HP.set(1)
+			var_HN.set(1)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '16':
+			var_CHC.set(0)
+			var_CHD.set(0)
+			var_CE.set(1)
+			var_ATKP.set(0)
+			var_ATKV.set(0)
+			var_EM.set(0)
+			var_HP.set(1)
+			var_HN.set(1)
+			var_DEFP.set(0)
+			var_DEFV.set(0)
+		elif combobox_attrqs.get()[:2] == '17':
+			var_CHC.set(1)
+			var_CHD.set(1)
+			var_CE.set(0)
+			var_ATKP.set(0)
+			var_ATKV.set(0)
+			var_EM.set(1)
+			var_HP.set(0)
+			var_HN.set(0)
+			var_DEFP.set(1)
+			var_DEFV.set(1)
 		elif int(combobox_attrqs.get()[:2]) in range(1, 18):
 			raise RuntimeError('Not currently supported')
 		else:
@@ -188,14 +353,14 @@ def attrqs():
 	except Exception as e:
 		txt_attrqs_err.configure(state='normal')
 		txt_attrqs_err.delete('1.0', '2.0')
-		txt_attrqs_err.insert('end', f'{strftime("%H:%M:%S", localtime())}: Error\n')
+		txt_attrqs_err.insert('end', f'Error\n')
 		txt_attrqs_err.configure(state='disabled')
 		if DEBUG:
 			print(type(e), e)
 	else:
 		txt_attrqs_err.configure(state='normal')
 		txt_attrqs_err.delete('1.0', '2.0')
-		txt_attrqs_err.insert('end', f'{strftime("%H:%M:%S", localtime())}: Success\n')
+		txt_attrqs_err.insert('end', f'Success\n')
 		txt_attrqs_err.configure(state='disabled')
 
 var_attrqs = StringVar()
@@ -215,7 +380,7 @@ btn_attrqs = Button(frame_attrqs, text='应用', command=attrqs)
 btn_attrqs.grid(column=0, row=2)
 
 txt_attrqs_err = Text(frame_attrqs, height=1, width=35)
-txt_attrqs_err.insert('0.0', '--:--:--: ---')
+txt_attrqs_err.insert('0.0', '---')
 txt_attrqs_err.configure(state='disabled')
 
 txt_attrqs_err.grid(column=0, row=3)
@@ -235,9 +400,9 @@ combobox_attr3 = Combobox(frame_input, textvariable=var_attr3, width=10, value=A
 combobox_attr4 = Combobox(frame_input, textvariable=var_attr4, width=10, value=ATTR_TUP)
 
 var_attr1.set('暴击率')
-var_attr2.set('暴击伤害')
-var_attr3.set('攻击力百分比')
-var_attr4.set('元素充能效率')
+var_attr2.set('暴击率')
+var_attr3.set('暴击率')
+var_attr4.set('暴击率')
 
 combobox_attr1.grid(column=0, row=1)
 combobox_attr2.grid(column=1, row=1)
@@ -254,10 +419,10 @@ txt_attr2.grid(column=1, row=2)
 txt_attr3.grid(column=2, row=2)
 txt_attr4.grid(column=3, row=2)
 
-txt_attr1.insert(0, '11.7')
-txt_attr2.insert(0, '23.4')
-txt_attr3.insert(0, '10.0')
-txt_attr4.insert(0, '6.5')
+txt_attr1.insert(0, '0')
+txt_attr2.insert(0, '0')
+txt_attr3.insert(0, '0')
+txt_attr4.insert(0, '0')
 
 def calc():
 	try:
